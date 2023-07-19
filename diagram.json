@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Niyati Singh",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -43.33, "left": -12.67, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -46.4,
+      "left": -174.2,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "bz1:1", "esp:GND.2", "green", [ "v70.6", "h140.03" ] ],
+    [ "bz1:2", "esp:D26", "green", [ "v18.6", "h128.7" ] ]
+  ],
+  "dependencies": {}
+}
